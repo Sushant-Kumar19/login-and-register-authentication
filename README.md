@@ -4,3 +4,4 @@ This code is login and register authentication in MongoDB.
  if facing any problem just rerun or reinstall all the dependicies.
 
  open the mongoDB compass when you are running the npm run dev for the creationog the databse 
+![Screenshot 2025-05-29 172737](https://github.com/user-attachments/assets/4048b42c-1695-44f7-ac21-6645b3cadc1d)
