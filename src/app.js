@@ -42,16 +42,14 @@ app.get("/home", (req, res) => {
 app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
-    // Find user by email
+
     const user = await Register.findOne({ email: email });
     if (!user) {
       return res.status(400).send("Invalid login credentials. User not found.");
     }
-    // Check password (plain text compare; in real apps, use hashing/salting)
     if (user.password !== password) {
       return res.status(400).send("Invalid login credentials. Password incorrect.");
     }
-    // Login success - redirect to homepage
     res.redirect("/home");
   } catch (error) {
     console.error(error);
